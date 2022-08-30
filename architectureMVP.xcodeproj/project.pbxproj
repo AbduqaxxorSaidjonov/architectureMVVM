@@ -17,6 +17,13 @@
 		76472A6A28BB63C7000E361E /* architectureMVPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76472A6928BB63C7000E361E /* architectureMVPTests.swift */; };
 		76472A7428BB63C7000E361E /* architectureMVPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76472A7328BB63C7000E361E /* architectureMVPUITests.swift */; };
 		76472A7628BB63C7000E361E /* architectureMVPUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76472A7528BB63C7000E361E /* architectureMVPUITestsLaunchTests.swift */; };
+		76472A8528BB69D4000E361E /* AFHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76472A8428BB69D4000E361E /* AFHttp.swift */; };
+		76472A8828BB69F2000E361E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 76472A8728BB69F2000E361E /* Alamofire */; };
+		76472A8B28BB6A2E000E361E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76472A8A28BB6A2E000E361E /* Post.swift */; };
+		7686217E28BE019F00018643 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7686217C28BE019F00018643 /* HomeViewController.swift */; };
+		7686217F28BE019F00018643 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7686217D28BE019F00018643 /* HomeViewController.xib */; };
+		7686218228BE01C900018643 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7686218128BE01C900018643 /* HomeView.swift */; };
+		7686218428BE01D600018643 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7686218328BE01D600018643 /* HomePresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +58,12 @@
 		76472A6F28BB63C7000E361E /* architectureMVPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = architectureMVPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		76472A7328BB63C7000E361E /* architectureMVPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = architectureMVPUITests.swift; sourceTree = "<group>"; };
 		76472A7528BB63C7000E361E /* architectureMVPUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = architectureMVPUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		76472A8428BB69D4000E361E /* AFHttp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFHttp.swift; sourceTree = "<group>"; };
+		76472A8A28BB6A2E000E361E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		7686217C28BE019F00018643 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7686217D28BE019F00018643 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		7686218128BE01C900018643 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		7686218328BE01D600018643 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76472A8828BB69F2000E361E /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,12 +115,12 @@
 		76472A4E28BB63C6000E361E /* architectureMVP */ = {
 			isa = PBXGroup;
 			children = (
+				7686217B28BE017500018643 /* screens */,
+				76472A8928BB6A21000E361E /* model */,
+				76472A8328BB69C6000E361E /* networking */,
+				76472A8228BB64B5000E361E /* apputils */,
 				76472A4F28BB63C6000E361E /* AppDelegate.swift */,
 				76472A5128BB63C6000E361E /* SceneDelegate.swift */,
-				76472A5328BB63C6000E361E /* ViewController.swift */,
-				76472A5528BB63C6000E361E /* Main.storyboard */,
-				76472A5B28BB63C7000E361E /* Assets.xcassets */,
-				76472A5D28BB63C7000E361E /* LaunchScreen.storyboard */,
 				76472A6028BB63C7000E361E /* Info.plist */,
 				76472A5828BB63C6000E361E /* architectureMVP.xcdatamodeld */,
 			);
@@ -130,6 +144,52 @@
 			path = architectureMVPUITests;
 			sourceTree = "<group>";
 		};
+		76472A8228BB64B5000E361E /* apputils */ = {
+			isa = PBXGroup;
+			children = (
+				76472A5D28BB63C7000E361E /* LaunchScreen.storyboard */,
+				76472A5B28BB63C7000E361E /* Assets.xcassets */,
+				76472A5528BB63C6000E361E /* Main.storyboard */,
+				76472A5328BB63C6000E361E /* ViewController.swift */,
+			);
+			path = apputils;
+			sourceTree = "<group>";
+		};
+		76472A8328BB69C6000E361E /* networking */ = {
+			isa = PBXGroup;
+			children = (
+				76472A8428BB69D4000E361E /* AFHttp.swift */,
+			);
+			path = networking;
+			sourceTree = "<group>";
+		};
+		76472A8928BB6A21000E361E /* model */ = {
+			isa = PBXGroup;
+			children = (
+				76472A8A28BB6A2E000E361E /* Post.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		7686217B28BE017500018643 /* screens */ = {
+			isa = PBXGroup;
+			children = (
+				7686218028BE01B800018643 /* presenter */,
+				7686217C28BE019F00018643 /* HomeViewController.swift */,
+				7686217D28BE019F00018643 /* HomeViewController.xib */,
+			);
+			path = screens;
+			sourceTree = "<group>";
+		};
+		7686218028BE01B800018643 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				7686218128BE01C900018643 /* HomeView.swift */,
+				7686218328BE01D600018643 /* HomePresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +206,9 @@
 			dependencies = (
 			);
 			name = architectureMVP;
+			packageProductDependencies = (
+				76472A8728BB69F2000E361E /* Alamofire */,
+			);
 			productName = architectureMVP;
 			productReference = 76472A4C28BB63C6000E361E /* architectureMVP.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +281,9 @@
 				Base,
 			);
 			mainGroup = 76472A4328BB63C6000E361E;
+			packageReferences = (
+				76472A8628BB69F2000E361E /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 76472A4D28BB63C6000E361E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -237,6 +303,7 @@
 				76472A5F28BB63C7000E361E /* LaunchScreen.storyboard in Resources */,
 				76472A5C28BB63C7000E361E /* Assets.xcassets in Resources */,
 				76472A5728BB63C6000E361E /* Main.storyboard in Resources */,
+				7686217F28BE019F00018643 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,9 +328,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76472A8528BB69D4000E361E /* AFHttp.swift in Sources */,
 				76472A5428BB63C6000E361E /* ViewController.swift in Sources */,
 				76472A5028BB63C6000E361E /* AppDelegate.swift in Sources */,
+				76472A8B28BB6A2E000E361E /* Post.swift in Sources */,
 				76472A5A28BB63C6000E361E /* architectureMVP.xcdatamodeld in Sources */,
+				7686218228BE01C900018643 /* HomeView.swift in Sources */,
+				7686218428BE01D600018643 /* HomePresenter.swift in Sources */,
+				7686217E28BE019F00018643 /* HomeViewController.swift in Sources */,
 				76472A5228BB63C6000E361E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,6 +513,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = architectureMVP/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -468,6 +541,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = architectureMVP/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -600,6 +674,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		76472A8628BB69F2000E361E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		76472A8728BB69F2000E361E /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 76472A8628BB69F2000E361E /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		76472A5828BB63C6000E361E /* architectureMVP.xcdatamodeld */ = {
