@@ -22,8 +22,8 @@
 		76472A8B28BB6A2E000E361E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76472A8A28BB6A2E000E361E /* Post.swift */; };
 		7686217E28BE019F00018643 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7686217C28BE019F00018643 /* HomeViewController.swift */; };
 		7686217F28BE019F00018643 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7686217D28BE019F00018643 /* HomeViewController.xib */; };
-		7686218228BE01C900018643 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7686218128BE01C900018643 /* HomeView.swift */; };
-		7686218428BE01D600018643 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7686218328BE01D600018643 /* HomePresenter.swift */; };
+		76CB00D528BF593B008CEED9 /* Bond in Frameworks */ = {isa = PBXBuildFile; productRef = 76CB00D428BF593B008CEED9 /* Bond */; };
+		76CB00D828BF59A3008CEED9 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CB00D728BF59A3008CEED9 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,8 +62,7 @@
 		76472A8A28BB6A2E000E361E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		7686217C28BE019F00018643 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7686217D28BE019F00018643 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		7686218128BE01C900018643 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		7686218328BE01D600018643 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		76CB00D728BF59A3008CEED9 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +71,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76472A8828BB69F2000E361E /* Alamofire in Frameworks */,
+				76CB00D528BF593B008CEED9 /* Bond in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,20 +174,19 @@
 		7686217B28BE017500018643 /* screens */ = {
 			isa = PBXGroup;
 			children = (
-				7686218028BE01B800018643 /* presenter */,
+				76CB00D628BF5991008CEED9 /* viewModel */,
 				7686217C28BE019F00018643 /* HomeViewController.swift */,
 				7686217D28BE019F00018643 /* HomeViewController.xib */,
 			);
 			path = screens;
 			sourceTree = "<group>";
 		};
-		7686218028BE01B800018643 /* presenter */ = {
+		76CB00D628BF5991008CEED9 /* viewModel */ = {
 			isa = PBXGroup;
 			children = (
-				7686218128BE01C900018643 /* HomeView.swift */,
-				7686218328BE01D600018643 /* HomePresenter.swift */,
+				76CB00D728BF59A3008CEED9 /* HomeViewModel.swift */,
 			);
-			path = presenter;
+			path = viewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +207,7 @@
 			name = architectureMVP;
 			packageProductDependencies = (
 				76472A8728BB69F2000E361E /* Alamofire */,
+				76CB00D428BF593B008CEED9 /* Bond */,
 			);
 			productName = architectureMVP;
 			productReference = 76472A4C28BB63C6000E361E /* architectureMVP.app */;
@@ -283,6 +283,7 @@
 			mainGroup = 76472A4328BB63C6000E361E;
 			packageReferences = (
 				76472A8628BB69F2000E361E /* XCRemoteSwiftPackageReference "Alamofire" */,
+				76CB00D328BF593B008CEED9 /* XCRemoteSwiftPackageReference "Bond" */,
 			);
 			productRefGroup = 76472A4D28BB63C6000E361E /* Products */;
 			projectDirPath = "";
@@ -331,10 +332,9 @@
 				76472A8528BB69D4000E361E /* AFHttp.swift in Sources */,
 				76472A5428BB63C6000E361E /* ViewController.swift in Sources */,
 				76472A5028BB63C6000E361E /* AppDelegate.swift in Sources */,
+				76CB00D828BF59A3008CEED9 /* HomeViewModel.swift in Sources */,
 				76472A8B28BB6A2E000E361E /* Post.swift in Sources */,
 				76472A5A28BB63C6000E361E /* architectureMVP.xcdatamodeld in Sources */,
-				7686218228BE01C900018643 /* HomeView.swift in Sources */,
-				7686218428BE01D600018643 /* HomePresenter.swift in Sources */,
 				7686217E28BE019F00018643 /* HomeViewController.swift in Sources */,
 				76472A5228BB63C6000E361E /* SceneDelegate.swift in Sources */,
 			);
@@ -684,6 +684,14 @@
 				kind = branch;
 			};
 		};
+		76CB00D328BF593B008CEED9 /* XCRemoteSwiftPackageReference "Bond" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/DeclarativeHub/Bond.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -691,6 +699,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 76472A8628BB69F2000E361E /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		76CB00D428BF593B008CEED9 /* Bond */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 76CB00D328BF593B008CEED9 /* XCRemoteSwiftPackageReference "Bond" */;
+			productName = Bond;
 		};
 /* End XCSwiftPackageProductDependency section */
 
